@@ -1,0 +1,37 @@
+name: "@gt-dinuo/mcp-server-connector"
+description: "MCP Server for connecting to remote cloud servers and analyzing project files (Read-only)"
+version: "1.0.0"
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties: {}
+  commandFunction: |
+    (config) => ({
+      command: "python",
+      args: ["server.py"]
+    })
+
+build:
+  installCommand: "pip install -r requirements.txt"
+  buildCommand: ""
+
+runtime:
+  type: python
+  version: ">=3.10"
+
+description: |
+  A secure, read-only MCP server for connecting to remote cloud servers via SSH.
+  Features include project browsing, log file discovery, log analysis, and keyword searching.
+
+tags:
+  - mcp
+  - ssh
+  - server
+  - cloud
+  - logs
+  - devops
+
+homepage: "https://github.com/GT-dinuo/mcp-server-connector"
+license: "MIT"
