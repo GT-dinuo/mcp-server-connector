@@ -1,7 +1,7 @@
 [project]
-name = "mcp-log-analyzer"
+name = "mcp-server-connector"
 version = "1.0.0"
-description = "MCP Server for analyzing project logs on remote cloud servers (Read-only)"
+description = "MCP Server for connecting to remote cloud servers and analyzing project files (Read-only)"
 requires-python = ">=3.10"
 dependencies = [
     "mcp>=1.0.0",
@@ -10,7 +10,7 @@ dependencies = [
 ]
 
 [project.scripts]
-mcp-log-analyzer = "server:main"
+mcp-server-connector = "server:main"
 
 [build-system]
 requires = ["hatchling"]

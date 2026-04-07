@@ -1,6 +1,6 @@
-# MCP Log Analyzer
+# MCP Server Connector
 
-一个用于连接云服务器并分析项目日志的 MCP (Model Context Protocol) 服务器。
+一个用于连接云服务器并分析项目文件的 MCP (Model Context Protocol) 服务器。支持安全地浏览、查看和分析服务器上的项目内容。
 
 ## 功能特性
 
@@ -20,8 +20,8 @@
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # 克隆仓库
-git clone https://github.com/YOUR_USERNAME/mcp-log-analyzer.git
-cd mcp-log-analyzer
+git clone https://github.com/GT-dinuo/mcp-server-connector.git
+cd mcp-server-connector
 
 # 使用 uv 运行
 uv run server.py
@@ -31,8 +31,8 @@ uv run server.py
 
 ```bash
 # 克隆仓库
-git clone https://github.com/YOUR_USERNAME/mcp-log-analyzer.git
-cd mcp-log-analyzer
+git clone https://github.com/GT-dinuo/mcp-server-connector.git
+cd mcp-server-connector
 
 # 创建虚拟环境
 python -m venv .venv
@@ -50,7 +50,7 @@ pip install -r requirements.txt
 ### 方式 3：使用 Smithery
 
 ```bash
-npx @smithery/cli install mcp-log-analyzer
+npx @smithery/cli install @gt-dinuo/mcp-server-connector
 ```
 
 ## 配置 Claude Desktop
@@ -61,9 +61,9 @@ npx @smithery/cli install mcp-log-analyzer
 ```json
 {
   "mcpServers": {
-    "log-analyzer": {
+    "server-connector": {
       "command": "python",
-      "args": ["C:\\path\\to\\mcp-log-analyzer\\server.py"]
+      "args": ["C:\\path\\to\\mcp-server-connector\\server.py"]
     }
   }
 }
@@ -73,9 +73,9 @@ npx @smithery/cli install mcp-log-analyzer
 ```json
 {
   "mcpServers": {
-    "log-analyzer": {
+    "server-connector": {
       "command": "python",
-      "args": ["/path/to/mcp-log-analyzer/server.py"]
+      "args": ["/path/to/mcp-server-connector/server.py"]
     }
   }
 }
@@ -85,9 +85,9 @@ npx @smithery/cli install mcp-log-analyzer
 ```json
 {
   "mcpServers": {
-    "log-analyzer": {
+    "server-connector": {
       "command": "uv",
-      "args": ["--directory", "/path/to/mcp-log-analyzer", "run", "server.py"]
+      "args": ["--directory", "/path/to/mcp-server-connector", "run", "server.py"]
     }
   }
 }
