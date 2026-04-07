@@ -1,0 +1,47 @@
+{
+  "name": "@gt-dinuo/mcp-server-connector",
+  "version": "1.0.0",
+  "description": "MCP Server for connecting to remote cloud servers and analyzing project files (Read-only)",
+  "license": "MIT",
+  "author": "GT-dinuo",
+  "homepage": "https://github.com/GT-dinuo/mcp-server-connector",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GT-dinuo/mcp-server-connector.git"
+  },
+  "bugs": "https://github.com/GT-dinuo/mcp-server-connector/issues",
+  "type": "module",
+  "bin": {
+    "mcp-server-connector": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "server.py",
+    "requirements.txt",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/index.js",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "shx": "^0.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "ssh",
+    "cloud",
+    "server",
+    "remote",
+    "logs",
+    "devops"
+  ]
+}

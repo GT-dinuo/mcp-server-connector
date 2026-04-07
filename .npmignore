@@ -1,0 +1,34 @@
+# Source files (not needed in npm package)
+src/
+tsconfig.json
+
+# Git
+.git/
+.gitignore
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Smithery
+smithery.yaml
+
+# Misc
+*.md
+!README.md

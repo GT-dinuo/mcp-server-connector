@@ -13,7 +13,24 @@
 
 ## 安装
 
-### 方式 1：使用 uv（推荐）
+### 方式 1：使用 npx（免安装，推荐）
+
+无需克隆仓库，直接配置即可使用：
+
+```json
+{
+  "mcpServers": {
+    "server-connector": {
+      "command": "npx",
+      "args": ["-y", "@gt-dinuo/mcp-server-connector"]
+    }
+  }
+}
+```
+
+> 第一次运行时会自动下载，之后缓存到本地。
+
+### 方式 2：使用 uv（推荐）
 
 ```bash
 # 安装 uv（如未安装）
@@ -27,7 +44,7 @@ cd mcp-server-connector
 uv run server.py
 ```
 
-### 方式 2：使用 pip
+### 方式 3：使用 pip
 
 ```bash
 # 克隆仓库
@@ -47,7 +64,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 方式 3：使用 Smithery
+### 方式 4：使用 Smithery
 
 ```bash
 npx @smithery/cli install @gt-dinuo/mcp-server-connector
@@ -57,19 +74,19 @@ npx @smithery/cli install @gt-dinuo/mcp-server-connector
 
 在 Claude Desktop 配置文件 `claude_desktop_config.json` 中添加：
 
-### Windows
+### 推荐：使用 npx（无需本地路径）
 ```json
 {
   "mcpServers": {
     "server-connector": {
-      "command": "python",
-      "args": ["C:\\path\\to\\mcp-server-connector\\server.py"]
+      "command": "npx",
+      "args": ["-y", "@gt-dinuo/mcp-server-connector"]
     }
   }
 }
 ```
 
-### macOS/Linux
+### 使用本地 Python
 ```json
 {
   "mcpServers": {
